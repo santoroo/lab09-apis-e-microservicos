@@ -1,0 +1,70 @@
+{
+  "info": {
+    "name": "Exercicio 9.1 - Flask API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Hello World",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5001/"
+      }
+    },
+    {
+      "name": "GET /items",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5001/items"
+      }
+    },
+    {
+      "name": "GET /items/:id",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5001/items/1"
+      }
+    },
+    {
+      "name": "POST /items",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:5001/items",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Novo Item\",\n  \"description\": \"Descrição do novo item\"\n}"
+        }
+      }
+    },
+    {
+      "name": "PUT /items/:id",
+      "request": {
+        "method": "PUT",
+        "url": "http://localhost:5001/items/1",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Item Atualizado\",\n  \"description\": \"Descrição atualizada\"\n}"
+        }
+      }
+    },
+    {
+      "name": "DELETE /items/:id",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:5001/items/1"
+      }
+    }
+  ]
+}
